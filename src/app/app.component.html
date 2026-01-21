@@ -1,0 +1,76 @@
+<div class="container">
+  <header class="app-header">
+    <div class="logo-container">
+       <img src="assets/logo.png" alt="Tech News Logo" class="logo-img">
+       <div class="title-group">
+         <h1>Hacker News Hub</h1>
+         <p>Powered by Hacker News API</p>
+       </div>
+    </div>
+  </header>
+
+  <main>
+    @if (isLoadingIds) {
+      <div class="loading-container full-page">
+        <div class="spinner"></div>
+        <p>Initializing application...</p>
+      </div>
+    } 
+    @else {
+      
+      <section class="news-list">
+        @for (story of displayedStories; track story.id) {
+          <article class="news-card">
+            <div class="card-content">
+              <a [href]="story.url ? story.url : 'https://news.ycombinator.com/item?id=' + story.id" 
+                 target="_blank" 
+                 class="news-title">
+                {{ story.title }}
+              </a>
+              
+              <div class="news-meta">
+                <span class="date">📅 {{ story.time * 1000 | date:'MMM dd, yyyy HH:mm' }}</span>
+                <span class="author">👤 {{ story.by }}</span>
+                <span class="score">⭐ {{ story.score }} pts</span>
+              </div>
+            </div>
+
+            <div class="card-action">
+              <a [href]="story.url ? story.url : 'https://news.ycombinator.com/item?id=' + story.id" 
+                 target="_blank" 
+                 class="btn-read">
+                 {{ story.url ? 'Read Article →' : 'Discuss →' }}
+              </a>
+            </div>
+          </article>
+        }
+      </section>
+
+      @if (isLoadingStories) {
+        <div class="loading-container">
+          <div class="spinner"></div>
+          <p>Loading more news...</p>
+        </div>
+      }
+
+      @if (hasMoreStories && !isLoadingStories) {
+        <div class="actions-container">
+          <button (click)="loadNextBatch()" class="btn-load-more">
+            Load More News
+          </button>
+        </div>
+      }
+
+      @if (!hasMoreStories && !isLoadingStories && !isLoadingIds) {
+        <p class="end-msg">No more news available.</p>
+      }
+    }
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2026 Hacker News Hub. All rights reserved.</p>
+    <p>Second project developed for the <strong>start2impact</strong> Angular Course.</p>
+    <p class="credits">Made by <strong>Lorenzo Sottile</strong> with <span class="heart">♥</span></p>
+  </footer>
+
+</div>
