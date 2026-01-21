@@ -69,7 +69,7 @@ The codebase follows the **Separation of Concerns (SoC)** principle.
 
 ---
 
-## Data Flow & Logic
+## 🗃️ Data Flow & Logic
 
 1. **Service Layer** (`hacker-news.service.ts`):
    - Manages raw HTTP `GET` requests to Firebase API endpoints (`/newstories.json` and `/item/{id}.json`)
@@ -102,7 +102,7 @@ Follow these steps to run the project locally.
 - Node.js (v18+)
 - Angular CLI (`npm install -g @angular/cli`)
 
-### Installation
+### 🔧 Installation
 
 1. **Clone the repository**:
 
