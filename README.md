@@ -129,21 +129,41 @@ Follow these steps to run the project locally.
 
 ## ☁️ Deployment
 
-The application is optimized for production and deployed on Firebase.
+The application is currently live at the link provided in the header.
+If you wish to deploy your own version of this project to Firebase, follow these steps:
 
-1. **Build the project**:
+1. **Install Firebase Tools** (if not already installed):
+   
+   ```bash
+   npm install -g firebase-tools
+   ```
 
-```bash
+2. **Login to Firebase**:
+   
+   ```bash
+   firebase login
+   ```
+
+3. **Initialize the project** (Connect to your own Firebase project):
+
+   ```bash
+   firebase init
+   ```
+   
+   Select "Hosting", create/select your project, and set `dist/hacker-news-hub/browser` as the public directory.
+   
+4. **Build the application**:
+   
+   ```bash
    ng build
-```
-   Output directory: `dist/hacker-news-hub/browser`
+   ```
 
-2. **Deploy to Firebase**:
-
-```bash
+5. **Deploy**:
+    
+   ```bash
    firebase deploy
-```
-
+   ```
+   
 ---
 
 ## 🔗 Useful Links
