@@ -168,7 +168,7 @@ If you wish to deploy your own version of this project to Firebase, follow these
 
 ## 🔗 Useful Links
 
-* [start2impact](https://www.start2impact.it/)
-* [My LinkedIn](https://linkedin.com/in/lorenzo-sottile)
+* **start2impact:** [https://www.start2impact.it/](https://www.start2impact.it/)
+* **My LinkedIn:** [https://www.linkedin.com/in/lorenzo-sottile/](https://www.linkedin.com/in/lorenzo-sottile/)
 
 ---
