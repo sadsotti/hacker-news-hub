@@ -29,11 +29,6 @@ testem.log
 !.vscode/extensions.json
 .history/
 
-# Firebase
-.firebase/
-firebase-debug.log
-firebase-debug.*.log
-
 # Angular
 .angular/
 
