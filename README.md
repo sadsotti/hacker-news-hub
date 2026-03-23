@@ -8,7 +8,7 @@ Second project developed by me for the **start2impact** Angular Course.
 
 ## 🚀 Live Demo
 
-👉 [**Hacker News Hub**](https://hacker-news-hub.web.app/) 👈
+👉 [**Hacker News Hub**](https://hacker-news-hub.netlify.app/) 👈
 
 ---
 
@@ -42,7 +42,6 @@ The codebase follows the **Separation of Concerns (SoC)** principle.
 
 ```text
 ├── angular.json
-├── firebase.json
 ├── package.json
 ├── package-lock.json
 ├── tsconfig.app.json
@@ -88,7 +87,7 @@ The codebase follows the **Separation of Concerns (SoC)** principle.
 - **Reactive Programming**: RxJS (Observables, Operators)
 - **Language**: TypeScript
 - **Styling**: SCSS (Sass)
-- **Deployment**: Firebase Hosting
+- **Deployment**: Netlify
 - **Tools**: Angular CLI, VS Code
 
 ---
@@ -129,41 +128,36 @@ Follow these steps to run the project locally.
 
 ## ☁️ Deployment
 
-The application is currently live at the link provided in the header.
-If you wish to deploy your own version of this project to Firebase, follow these steps:
+The application is currently live at the link provided in the header, hosted on **Netlify**.
+If you wish to deploy your own version of this project to Netlify, follow these steps:
 
-1. **Install Firebase Tools** (if not already installed):
-   
-   ```bash
-   npm install -g firebase-tools
-   ```
+### Option 1: Deploy via GitHub (Recommended)
 
-2. **Login to Firebase**:
-   
-   ```bash
-   firebase login
-   ```
+1. **Fork or clone** this repository to your own GitHub account.
 
-3. **Initialize the project** (Connect to your own Firebase project):
+2. Log in to [Netlify](https://www.netlify.com/).
 
-   ```bash
-   firebase init
-   ```
-   
-   Select "Hosting", create/select your project, and set `dist/hacker-news-hub/browser` as the public directory.
-   
-4. **Build the application**:
-   
+3. Click **"Add new site"** -> **"Import an existing project"**.
+
+4. Connect your GitHub account and select your repository.
+
+5. Netlify will auto-detect the settings from the `netlify.toml` file. Verify the **Build settings** are correct:
+   * **Build command:** `npm run build`
+   * **Publish directory:** `dist/hacker-news-hub/browser`
+
+6. Click **"Deploy site"**.
+
+### Option 2: Manual Deploy (Netlify Drop)
+
+1. **Build the application** locally:
    ```bash
    ng build
    ```
 
-5. **Deploy**:
-    
-   ```bash
-   firebase deploy
-   ```
-   
+2. Log in to Netlify and go to the **Sites** tab. 
+
+3. Drag and drop the generated `dist/hacker-news-hub/browser` folder directly into the upload area.  
+
 ---
 
 ## 🔗 Useful Links
