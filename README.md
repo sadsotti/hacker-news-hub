@@ -141,7 +141,7 @@ If you wish to deploy your own version of this project to Netlify, follow these 
 
 4. Connect your GitHub account and select your repository.
 
-5. Netlify will auto-detect the settings from the `netlify.toml` file. Verify the **Build settings** are correct:
+5. Netlify will auto-detect the settings. Verify the **Build settings** are correct:
    * **Build command:** `npm run build`
    * **Publish directory:** `dist/hacker-news-hub/browser`
 
